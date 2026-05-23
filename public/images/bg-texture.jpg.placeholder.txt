@@ -1,0 +1,8 @@
+# Placeholder for background texture image
+# Replace this file with your actual bg-texture.jpg
+# 
+# Recommended specs:
+# - A subtle gray texture/pattern
+# - Resolution: 1920x1080px or larger
+# - File size: < 100KB
+# - Format: JPG
