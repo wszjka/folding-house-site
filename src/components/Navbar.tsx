@@ -3,33 +3,38 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import type { Dict } from '@/dictionaries'
 
-export default function Navbar() {
+interface NavbarProps {
+  lang: string
+  dict: Dict
+}
+
+export default function Navbar({ lang, dict }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/products', label: 'Products' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/contact', label: 'Contact' },
+    { href: `/${lang}`, label: dict.nav.home },
+    { href: `/${lang}/products`, label: dict.nav.products },
+    { href: `/${lang}/gallery`, label: dict.nav.gallery },
+    { href: `/${lang}/contact`, label: dict.nav.contact },
   ]
 
-  const isActive = (href: string) => pathname === href
+  const basePath = `/${lang}`
+  const isActive = (href: string) => pathname === href || pathname.startsWith(href + '/') && href !== basePath || (pathname === href)
 
   return (
     <nav className="bg-[#1e1e1e] border-b border-[#333333] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link 
-            href="/" 
+            href={`/${lang}`} 
             className="text-lg font-semibold tracking-tight text-white hover:text-blue-400 transition-colors"
           >
             MILES TECHNOLOGY
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
@@ -46,7 +51,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-400 hover:text-white"
@@ -64,7 +68,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-700">
             {navLinks.map((link) => (
