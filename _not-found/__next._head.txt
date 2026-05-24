@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[11491,["/_next/static/chunks/01xa4cbsbw9wq.js","/_next/static/chunks/0t~-~8v-hrqzl.js"],"ViewportBoundary"]
+3:I[11491,["/_next/static/chunks/01xa4cbsbw9wq.js","/_next/static/chunks/0t~-~8v-hrqzl.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[65493,["/_next/static/chunks/01xa4cbsbw9wq.js","/_next/static/chunks/0t~-~8v-hrqzl.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Miles Technology | Container House"}],["$","meta","1",{"name":"description","content":"Global modular house manufacturer with over 20 years of expertise in steel trade and container buildings."}],["$","link","2",{"rel":"icon","href":"/icon.png"}],["$","link","3",{"rel":"apple-touch-icon","href":"/icon.png"}],["$","$L5","4",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"P5Mn19Ke0SgejJca-w5VA"}
